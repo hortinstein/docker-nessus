@@ -11,9 +11,15 @@ MAINTAINER Tim Kropp <timkropp77@gmail.com>
 # Update the base image.
 # RUN yum -y update
 
+RUN yum -y update nss-util
+RUN yum -y update bind-license
+RUN yum -y update libssh2
+
+
 # Install dependencies.
 RUN yum -y install epel-release hostname && \
     yum clean all
+
 
 # Need Nessus account RPM
 # ADD http://downloads.nessus.org/nessus3dl.php?file=Nessus-6.3.7-es6.i386.rpm&licence_accept=yes&t=9bdd4aaf6bb049c9113b8d4287d27d18  /tmp/
