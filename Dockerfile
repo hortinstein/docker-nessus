@@ -1,6 +1,6 @@
 # http://tenable.com
 # https://index.docker.io/_/centos/
-FROM centos
+FROM centos:latest
 
 # https://github.com/sometheycallme
 MAINTAINER Tim Kropp <timkropp77@gmail.com>
